@@ -14,16 +14,16 @@ export default function ZoneFitnessLanding() {
   }, []);
 
   const features = [
-    { icon: Dumbbell, title: "Premium Equipment", desc: "State-of-the-art machines and free weights" },
-    { icon: Users, title: "Expert Trainers", desc: "Certified professionals to guide your journey" },
-    { icon: Clock, title: "24/7 Access", desc: "Train on your schedule, any time of day" },
-    { icon: Trophy, title: "Results Guaranteed", desc: "Proven programs that deliver real results" }
+    { icon: Dumbbell, title: "Add New Member", desc: "Add a New Member" },
+    { icon: Users, title: "Update Member List", desc: "Update into existing list" },
+    { icon: Clock, title: "Active User", desc: "Total active member subscription" },
+    { icon: Trophy, title: "Total Members", desc: "All Members List" }
   ];
 
   const testimonials = [
-    { name: "Sarah Johnson", rating: 5, text: "ZoneFitness transformed my life. Lost 30lbs and gained incredible confidence!" },
-    { name: "Mike Chen", rating: 5, text: "Best gym experience ever. The trainers are phenomenal and equipment is top-notch." },
-    { name: "Emma Davis", rating: 5, text: "Love the 24/7 access. Perfect for my busy schedule as a working mom." }
+    { name: "Arjun Rane", rating: 5, text: "ZoneFitness transformed my life. Lost 25Kgs and gained incredible confidence!" },
+    { name: "Supriya Khadka", rating: 5, text: "Best gym experience ever. The trainers are phenomenal and equipment is top-notch." },
+    { name: "om patil", rating: 5, text: "Love the vibes. Perfect for my busy schedule." }
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function ZoneFitnessLanding() {
       }`}>
         <div className="container mx-auto px-6 flex items-center justify-between">
           <div className="text-2xl font-bold">
-            <span className="text-red-500">Zone</span>
+            <span className="text-red-500">The Zone</span>
             <span className="text-white">Fitness</span>
           </div>
           
@@ -42,10 +42,10 @@ export default function ZoneFitnessLanding() {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#home" className="hover:text-red-500 transition-colors">Home</a>
             <a href="#about" className="hover:text-red-500 transition-colors">About</a>
-            <a href="#programs" className="hover:text-red-500 transition-colors">Programs</a>
+            <a href="#programs" className="hover:text-red-500 transition-colors">Plans</a>
             <a href="#contact" className="hover:text-red-500 transition-colors">Contact</a>
             <button className="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full font-semibold transition-colors">
-              Join Now
+              Sign In
             </button>
           </div>
 
@@ -89,16 +89,9 @@ export default function ZoneFitnessLanding() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join ZoneFitness and unlock your potential with premium equipment, expert trainers, and a community that pushes you to greatness.
+              </p><p><span className="text-red-500">By Bharat & Anuja</span>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center group">
-                Start Your Journey
-                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </button>
-              <button className="border-2 border-white hover:bg-white hover:text-black px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105">
-                Free Trial
-              </button>
-            </div>
+
           </div>
         </div>
         
@@ -112,11 +105,8 @@ export default function ZoneFitnessLanding() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Why Choose <span className="text-red-500">ZoneFitness?</span>
+              <span className="text-red-500">Zone</span>Fitness
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              We provide everything you need to achieve your fitness goals in a supportive, high-energy environment.
-            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -141,31 +131,36 @@ export default function ZoneFitnessLanding() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-red-500">Programs</span>
+              Our <span className="text-red-500">Plans</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Designed by experts, tailored for results. Choose the program that fits your goals.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-10">
             {[
               {
-                title: "Strength Training",
-                price: "$79/month",
-                features: ["Personal Training", "Nutrition Plan", "24/7 Access", "Progress Tracking"]
+                title: "1 month",
+                price: "2000/-month",
+                features: ["Cardio", "Nutrition Plan","Progress Tracking","Functional training"]
               },
               {
-                title: "Premium Membership",
-                price: "$129/month",
-                features: ["All Strength Benefits", "Group Classes", "Massage Therapy", "Meal Planning"],
+                title: "3 months",
+                price: "4000/-month",
+                features: ["Cardio", "Functional training", "Progress Tracking", "Nutrition Plan"],
                 popular: true
               },
               {
-                title: "Elite Performance",
-                price: "$199/month",
-                features: ["Everything Included", "1-on-1 Coaching", "Recovery Suite", "Competition Prep"]
-              }
+                title: "6 months",
+                price: "6000/-month",
+                features: ["Cardio", "Functional training", "Progress Tracking", "Nutrition Plan"]
+              },
+              {
+                title: "1 year",
+                price: "10000/-month",
+                features: ["Cardio", "Nutrition Plan","Progress Tracking","Functional training"]
+              },
             ].map((plan, index) => (
               <div 
                 key={index}
@@ -241,71 +236,37 @@ export default function ZoneFitnessLanding() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Ready to <span className="text-red-500">Get Started?</span>
+              <span className="text-red-500">The Zone Fitness</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Contact us today for a free consultation and tour of our facility.
+              Changing Lifestyles.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-red-500">Get In Touch</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center">
-                    <Phone className="text-red-500 mr-4" size={24} />
-                    <div>
-                      <div className="font-semibold">Phone</div>
-                      <div className="text-gray-400">+1 (555) 123-4567</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="text-red-500 mr-4" size={24} />
-                    <div>
-                      <div className="font-semibold">Email</div>
-                      <div className="text-gray-400">info@zonefitness.com</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="text-red-500 mr-4" size={24} />
-                    <div>
-                      <div className="font-semibold">Location</div>
-                      <div className="text-gray-400">123 Fitness Street, Gym City, GC 12345</div>
-                    </div>
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-8 text-red-500">Developed By:</h3>
+              <div className="space-y-6">
+                <div className="flex items-center justify-center">
+                  <Phone className="text-red-500 mr-4" size={24} />
+                  <div>
+                    <div className="font-semibold">Developer</div>
+                    <div className="text-gray-400">+91 7768092107</div>
                   </div>
                 </div>
-              </div>
-
-              <div>
-                <div className="space-y-6">
+                <div className="flex items-center justify-center">
+                  <Mail className="text-red-500 mr-4" size={24} />
                   <div>
-                    <input 
-                      type="text" 
-                      placeholder="Your Name" 
-                      className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors"
-                    />
+                    <div className="font-semibold">Email</div>
+                    <div className="text-gray-400">arjunrane5007@gmail.com</div>
                   </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <MapPin className="text-red-500 mr-4" size={24} />
                   <div>
-                    <input 
-                      type="email" 
-                      placeholder="Your Email" 
-                      className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors"
-                    />
+                    <div className="font-semibold">Name:</div>
+                    <div className="text-gray-400">Arjun Rane, Supriya Khadka</div>
                   </div>
-                  <div>
-                    <textarea 
-                      placeholder="Your Message" 
-                      rows={4}
-                      className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-red-500 focus:outline-none transition-colors resize-none"
-                    ></textarea>
-                  </div>
-                  <button 
-                    onClick={() => alert('Message sent! We\'ll get back to you soon.')}
-                    className="w-full bg-red-500 hover:bg-red-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
-                  >
-                    Send Message
-                  </button>
                 </div>
               </div>
             </div>
