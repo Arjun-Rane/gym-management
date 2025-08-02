@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Dumbbell, Users, Clock, Trophy, Star, Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { ChevronRight, Dumbbell, Users, Clock, Trophy, Star, Menu, X, Phone, Mail, MapPin, Heart, Target, Zap } from 'lucide-react';
 
 export default function ZoneFitnessLanding() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,17 +14,21 @@ export default function ZoneFitnessLanding() {
   }, []);
 
   const features = [
-    { icon: Dumbbell, title: "Add New Member", desc: "Add a New Member" },
-    { icon: Users, title: "Update Member List", desc: "Update into existing list" },
-    { icon: Clock, title: "Active User", desc: "Total active member subscription" },
-    { icon: Trophy, title: "Total Members", desc: "All Members List" }
+    { icon: Dumbbell, title: "Strength Training", desc: "Build muscle and increase power with our premium equipment" },
+    { icon: Heart, title: "Cardio Fitness", desc: "Improve cardiovascular health and endurance" },
+    { icon: Target, title: "Personal Training", desc: "One-on-one guidance from certified trainers" },
+    { icon: Zap, title: "Group Classes", desc: "Energizing group workouts and fitness programs" }
   ];
 
   const testimonials = [
     { name: "Arjun Rane", rating: 5, text: "ZoneFitness transformed my life. Lost 25Kgs and gained incredible confidence!" },
     { name: "Supriya Khadka", rating: 5, text: "Best gym experience ever. The trainers are phenomenal and equipment is top-notch." },
-    { name: "om patil", rating: 5, text: "Love the vibes. Perfect for my busy schedule." }
+    { name: "Om Patil", rating: 5, text: "Love the vibes. Perfect for my busy schedule." }
   ];
+
+  const handleSignIn = () => {
+    window.location.href = '/login';
+  };
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -44,7 +48,10 @@ export default function ZoneFitnessLanding() {
             <a href="#about" className="hover:text-red-500 transition-colors">About</a>
             <a href="#programs" className="hover:text-red-500 transition-colors">Plans</a>
             <a href="#contact" className="hover:text-red-500 transition-colors">Contact</a>
-            <button className="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full font-semibold transition-colors">
+            <button 
+              onClick={handleSignIn}
+              className="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full font-semibold transition-colors"
+            >
               Sign In
             </button>
           </div>
@@ -66,8 +73,11 @@ export default function ZoneFitnessLanding() {
               <a href="#about" className="hover:text-red-500 transition-colors">About</a>
               <a href="#programs" className="hover:text-red-500 transition-colors">Programs</a>
               <a href="#contact" className="hover:text-red-500 transition-colors">Contact</a>
-              <button className="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full font-semibold transition-colors w-fit">
-                Join Now
+              <button 
+                onClick={handleSignIn}
+                className="bg-red-500 hover:bg-red-600 px-6 py-2 rounded-full font-semibold transition-colors w-fit"
+              >
+                Sign In
               </button>
             </div>
           </div>
@@ -89,9 +99,16 @@ export default function ZoneFitnessLanding() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join ZoneFitness and unlock your potential with premium equipment, expert trainers, and a community that pushes you to greatness.
-              </p><p><span className="text-red-500">By Bharat & Anuja</span>
             </p>
-
+            <p><span className="text-red-500">By Bharat & Anuja</span></p>
+            <div className="mt-8">
+              <button 
+                onClick={handleSignIn}
+                className="bg-red-500 hover:bg-red-600 px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105"
+              >
+                Start Your Journey
+              </button>
+            </div>
           </div>
         </div>
         
@@ -101,12 +118,15 @@ export default function ZoneFitnessLanding() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-900">
+      <section id="about" className="py-20 bg-gray-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-red-500">Zone</span>Fitness
+              Why Choose <span className="text-red-500">ZoneFitness</span>
             </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Experience fitness like never before with our world-class facilities and expert guidance
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
